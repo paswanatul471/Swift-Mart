@@ -7,8 +7,8 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addCart } from '../../redux/actions/cartAction';
-import { payUsingPaytm } from '../../service/api';
-import { post } from '../../utils/paytm';
+// import { payUsingPaytm } from '../../service/api';
+// import { post } from '../../utils/paytm';
 
 
 
@@ -50,21 +50,21 @@ const ActionItem = ({product}) => {
     navigate('/cart')
   }
 
-  const buyNow = ()=>{
-    let response = payUsingPaytm({amount: 500, email: 'paytm@paytm.com'});
-    let information = {
-      action: 'https://securegw-stage.paytm.in/order/process',
-      param: response
-    }
-    post(information);
-  }
+  // const buyNow = ()=>{
+  //   let response = payUsingPaytm({amount: 500, email: 'paytm@paytm.com'});
+  //   let information = {
+  //     action: 'https://securegw-stage.paytm.in/order/process',
+  //     param: response
+  //   }
+  //   post(information);
+  // }
   return (
     <LeftContainer>
         <Box style={{padding:'15px 20px',border: '1px solid #f0f0f0', width: '90%'}}>
             <Image src={product.detailUrl} alt="" />
         </Box>
         <StyledButtons variant='contained' onClick={()=>{addItemToCart()}} style={{marginRight: 10, background: '#ff9f00'}}><ShoppingCartIcon/>Add to Cart</StyledButtons>
-        <StyledButtons variant='contained' onClick={()=> buyNow()} style={{background: '#fb541b'}}><FlashOnIcon/>Buy Now</StyledButtons>
+        <StyledButtons variant='contained'  style={{background: '#fb541b'}}><FlashOnIcon/>Buy Now</StyledButtons>
     </LeftContainer>
   )
 }
