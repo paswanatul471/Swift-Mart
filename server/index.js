@@ -11,7 +11,7 @@ dotenv.config();
 
 app.use(cors(
     {
-        origin: ["https://swift-mart-backend.vercel.app/"],
+        origin: ["https://swift-mart-frontend.vercel.app/"],
         methods: ['POST', 'GET'],
         credentials: true
     }
