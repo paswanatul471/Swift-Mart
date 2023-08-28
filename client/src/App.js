@@ -6,8 +6,12 @@ import DataProvider from './context/DataProvider'
 import DetailsView from './components/details/DetailsView'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Cart from './components/cart/Cart'
+import axios from 'axios'
+
 
 const App = () => {
+  axios.defaults.withCredentials = true;
+  axios.post('https://swift-mart-backend.vercel.app/');
   return (
     <DataProvider>
       <BrowserRouter>
