@@ -50,14 +50,7 @@ const ActionItem = ({product}) => {
     navigate('/cart')
   }
 
-  // const buyNow = ()=>{
-  //   let response = payUsingPaytm({amount: 500, email: 'paytm@paytm.com'});
-  //   let information = {
-  //     action: 'https://securegw-stage.paytm.in/order/process',
-  //     param: response
-  //   }
-  //   post(information);
-  // }
+
   return (
     <LeftContainer>
         <Box style={{padding:'15px 20px',border: '1px solid #f0f0f0', width: '90%'}}>

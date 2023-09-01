@@ -10,8 +10,8 @@ import axios from 'axios'
 
 
 const App = () => {
-  axios.defaults.withCredentials = true;
-  axios.post('https://swift-mart-backend.vercel.app/');
+  // axios.defaults.withCredentials = true;
+  // axios.post('https://swift-mart-backend.vercel.app/');
   return (
     <DataProvider>
       <BrowserRouter>
